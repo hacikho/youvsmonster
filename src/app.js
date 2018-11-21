@@ -6,7 +6,8 @@ new Vue({
     gameIsRunning: false,
     turns: [],
     healCounter: 0,
-    specialAttackCounter: 0
+    specialAttackCounter: 0,
+    healImage1Seen: true
   },
   methods: {
     startGame: function() {
