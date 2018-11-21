@@ -40,26 +40,81 @@
           <button id="start-game" @click="startGame">START NEW GAME</button>
         </div>
       </section>
+
       <section class="row controls" v-else>
-        <div class="small-12 columns">
-          <button id="attack" @click="attack">ATTACK</button>
-          <button
-            id="special-attack"
-            @click="specialAttack"
-            @click="specialAttackCounter + 1"
-            :disabled="isSpecialAttackDisabled"
-          >
-            SPECIAL ATTACK
-          </button>
-          <button
-            id="heal"
-            @click="heal"
-            @click="healCounter + 1"
-            :disabled="isHealDisabled"
-          >
-            HEAL
-          </button>
-          <button id="give-up" @click="giveUp">GIVE UP</button>
+        <div class="row">
+          <div class="small-3 columns">
+            <img
+              src="https://www.stickers-factory.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/2/6/26594_00.png"
+              width="50"
+              alt="attack drawing"
+            />
+          </div>
+          <div class="small-3 columns">
+            <img
+              src="https://www.stickers-factory.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/2/2/22535_00.png"
+              width="50"
+              alt="attack drawing"
+            />
+            <img
+              src="https://www.stickers-factory.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/2/2/22535_00.png"
+              width="50"
+              alt="attack drawing"
+            />
+            <img
+              src="https://www.stickers-factory.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/2/2/22535_00.png"
+              width="50"
+              alt="attack drawing"
+            />
+          </div>
+          <div class="small-3 columns">
+            <img
+              src="https://img.clipartxtras.com/57756b84021250d25303746cea4a3ea6_kit-clipart-clipground-first-aid-kit-clipart_300-300.jpeg"
+              width="50"
+              alt="first aid kit clipart"
+            />
+            <img
+              src="https://img.clipartxtras.com/57756b84021250d25303746cea4a3ea6_kit-clipart-clipground-first-aid-kit-clipart_300-300.jpeg"
+              width="50"
+              alt="first aid kit clipart"
+            />
+          </div>
+
+          <div class="small-3 columns">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5d/White_flag_icon.svg"
+              width="50"
+              alt="give up"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-3 columns">
+            <button id="attack" @click="attack">ATTACK</button>
+          </div>
+          <div class="small-3 columns">
+            <button
+              id="special-attack"
+              @click="specialAttack"
+              @click="specialAttackCounter + 1"
+              :disabled="isSpecialAttackDisabled"
+            >
+              SPECIAL ATTACK
+            </button>
+          </div>
+          <div class="small-3 columns">
+            <button
+              id="heal"
+              @click="heal"
+              @click="healCounter + 1"
+              :disabled="isHealDisabled"
+            >
+              HEAL
+            </button>
+          </div>
+          <div class="small-3 columns">
+            <button id="give-up" @click="giveUp">GIVE UP</button>
+          </div>
         </div>
       </section>
       <section class="row log" v-if="turns.length > 0">
